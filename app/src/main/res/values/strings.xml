@@ -1,0 +1,7 @@
+<resources>
+    <string name="appName">Ace Restaurant</string>
+    <string name="title">Welcome to Ace Restaurant</string>
+    <string name="goDrink">Drink Mixer</string>
+    <string name="goReservation">Reservations</string>
+    <string name="thankYou">Thank you for coming to see us! Please fill out the following to help us prepare for your visit.</string>
+</resources>
