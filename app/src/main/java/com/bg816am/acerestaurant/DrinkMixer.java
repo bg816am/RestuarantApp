@@ -1,6 +1,12 @@
 package com.bg816am.acerestaurant;
 
-public class DrinkMixer {
+import android.os.Bundle;
 
-
+public class DrinkMixer extends MainActivity {
+    //Link code to XML
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.drinkmixerscreen);
+    }
 }
