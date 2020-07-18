@@ -11,8 +11,8 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     //Create the home screen buttons to go to individual apps
-    private Button goToReservation;
-    private Button goToDrink;
+    Button goToReservation;
+    Button goToDrink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

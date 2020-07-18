@@ -36,7 +36,7 @@ public class Reservation extends MainActivity {
         chooseDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             
+
             }
         });
 

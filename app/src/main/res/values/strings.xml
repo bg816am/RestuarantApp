@@ -1,13 +1,20 @@
 <resources>
+    // Main Screen Items
     <string name="appName">Ace Restaurant</string>
     <string name="title">Welcome to Ace Restaurant</string>
     <string name="goDrink">Drink Mixer</string>
     <string name="goReservation">Reservations</string>
+
+    // Reservation Screen Items
     <string name="thankYou">Thank you for coming to see us! Please fill out the following to help us prepare for your visit.</string>
     <string name="nameBox">Name</string>
     <string name="emailBox">Email</string>
     <string name="phoneBox">Phone</string>
     <string name="timeSpinner">Time</string>
+    <string name="resButton">Date of Visit</string>
+    <string name="timeButton">Time of Visit</string>
+
+    // Drink Mixer Screen Items
     <string-array name="numberOfGuests">
         <item>How many guests?</item>
         <item>1</item>
