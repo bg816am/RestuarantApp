@@ -45,10 +45,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
-        android:autoText="true"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="@string/nameBox"
         app:layout_constraintBottom_toTopOf="@+id/phoneBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.078"
@@ -64,22 +64,50 @@
         android:layout_marginBottom="52dp"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:text="@string/emailBox"
         app:layout_constraintBottom_toTopOf="@+id/phoneBox"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameBox" />
+        app:layout_constraintTop_toBottomOf="@+id/nameBox"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/phoneBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="phone"
+        android:text="@string/phoneBox"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailBox" />
+        app:layout_constraintTop_toBottomOf="@+id/emailBox"
+        android:autofillHints="" />
+
+    <Spinner
+        android:id="@+id/guestNumber"
+        android:layout_width="183dp"
+        android:layout_height="52dp"
+        android:entries="@array/numberOfGuests"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.558" />
+
+    <Button
+        android:id="@+id/resDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guestNumber"
+        app:layout_constraintVertical_bias="0.182" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

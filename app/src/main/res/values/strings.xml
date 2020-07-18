@@ -4,4 +4,40 @@
     <string name="goDrink">Drink Mixer</string>
     <string name="goReservation">Reservations</string>
     <string name="thankYou">Thank you for coming to see us! Please fill out the following to help us prepare for your visit.</string>
+    <string name="nameBox">Name</string>
+    <string name="emailBox">Email</string>
+    <string name="phoneBox">Phone</string>
+    <string name="timeSpinner">Time</string>
+    <string-array name="numberOfGuests">
+        <item>How many guests?</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Liquors">
+        <item>Vodka</item>
+        <item>Tequila</item>
+        <item>Rum</item>
+        <item>Gin</item>
+    </string-array>
+    <string-array name="Mixers">
+        <item>Cola</item>
+        <item>Tonic Water</item>
+        <item>Cranberry Juice</item>
+        <item>Orange Juice</item>
+        <item>Sour Mix</item>
+    </string-array>
+    <string-array name="Garnishes">
+        <item>None</item>
+        <item>Salt Rim</item>
+        <item>Sugar Rim</item>
+        <item>Lemon</item>
+        <item>Lime</item>
+        <item>Cherry</item>
+    </string-array>
 </resources>
