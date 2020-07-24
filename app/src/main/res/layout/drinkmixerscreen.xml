@@ -22,7 +22,99 @@
         android:id="@+id/drinkTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/goDrink"
-        tools:layout_editor_absoluteX="170dp"
-        tools:layout_editor_absoluteY="94dp" />
+        app:layout_constraintBottom_toTopOf="@+id/liquorTitle"
+        app:layout_constraintStart_toEndOf="@+id/liquorTitle" />
+
+    <Spinner
+        android:id="@+id/liquorSpinner"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="85dp"
+        android:entries="@array/Liquors"
+        app:layout_constraintBottom_toBottomOf="@+id/garnishTitle"
+        app:layout_constraintEnd_toStartOf="@+id/mixerSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/drinkTitle" />
+
+    <Spinner
+        android:id="@+id/mixerSpinner"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="131dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="130dp"
+        android:entries="@array/Mixers"
+        app:layout_constraintBottom_toTopOf="@+id/garnishSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/liquorSpinner"
+        app:layout_constraintTop_toTopOf="@+id/drinkWelcome" />
+
+    <Spinner
+        android:id="@+id/garnishSpinner"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:entries="@array/Garnishes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/drinkView"
+        android:layout_width="128dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="112dp"
+        android:text="@string/drinkName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/garnishTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="35dp"
+        android:text="@string/garnishChoice"
+        app:layout_constraintBottom_toTopOf="@+id/garnishSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/garnishChoice" />
+
+    <TextView
+        android:id="@+id/liquorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="133dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="134dp"
+        app:layout_constraintBottom_toTopOf="@+id/garnishTitle"
+        app:layout_constraintEnd_toEndOf="@+id/liquorSpinner"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/liquorChoice" />
+
+    <TextView
+        android:id="@+id/mixerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/mixerSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/mixerChoice" />
+
+    <TextView
+        android:id="@+id/yourDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="38dp"
+        android:text="@string/yourDrinkTitleView"
+        app:layout_constraintBottom_toTopOf="@+id/drinkView"
+        app:layout_constraintStart_toStartOf="@+id/drinkView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 <resources>
      <!--Main Screen Items-->
+    <!--These are used throughout the app -->
     <string name="appName">Ace Restaurant</string>
     <string name="title">Welcome to Ace Restaurant</string>
     <string name="goDrink">Drink Mixer</string>
@@ -14,7 +15,7 @@
     <string name="resButton">Date of Visit</string>
     <string name="timeButton">Time of Visit</string>
 
-   <!--  Drink Mixer Screen Items-->
+   <!-- Reservation Guest Array -->
     <string-array name="numberOfGuests">
         <item>How many guests?</item>
         <item>1</item>
@@ -26,6 +27,23 @@
         <item>7</item>
         <item>8</item>
     </string-array>
+
+
+    <!-- Drink Mixer Screen Items  -->
+    <string name="mixerChoice">Select a Mixer</string>
+    <string name="liquorChoice">Choose a Liquor</string>
+    <string name="garnishChoice">Would you like to  add a garnish?</string>
+    <string name="drinkName"> Your Drink</string>
+    <string name="yourDrink"> You have made a</string>
+    <string name="goToReservation">Go to reservation layout</string>
+    <string name="titleView">Welcome to Ace Restaurant</string>
+    <string name="requestsText">Enter any special requests here</string>
+    <string name="confirmButton">Confirm</string>
+    <string name="yourDrinkTitleView">Your Drink</string>
+    <string name="visitTime">Time of Visit</string>
+    <string name="visitDate">Date of Visit</string>
+    <string name="dateSelect">Select Date</string>
+
     <string-array name="Liquors">
         <item>Vodka</item>
         <item>Tequila</item>
