@@ -4,30 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:alpha=".80"
+    android:background="@drawable/woodbackgrd"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/resButton"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:textColor="@color/primaryText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:contentDescription="@string/goToReservation"
         android:text="@string/goReservation"
+        android:textColor="@color/primaryText"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/drinkButton" />
 
     <Button
         android:id="@+id/drinkButton"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:textColor="@color/primaryText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/goDrink"
+        android:textColor="@color/primaryText"
         app:layout_constraintBottom_toTopOf="@+id/resButton"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -36,6 +37,7 @@
 
     <TextView
         android:id="@+id/textView"
+        android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

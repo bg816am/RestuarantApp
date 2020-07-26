@@ -28,7 +28,6 @@
         <item>8</item>
     </string-array>
 
-
     <!-- Drink Mixer Screen Items  -->
     <string name="mixerChoice">Select a Mixer</string>
     <string name="liquorChoice">Choose a Liquor</string>
@@ -45,17 +44,17 @@
     <string name="dateSelect">Select Date</string>
 
     <string-array name="Liquors">
-        <item>Vodka</item>
-        <item>Tequila</item>
-        <item>Rum</item>
-        <item>Gin</item>
+        <item><b>Vodka</b></item>
+        <item><b>Tequila</b></item>
+        <item><b>Rum</b></item>
+        <item><b>Gin</b></item>
     </string-array>
     <string-array name="Mixers">
-        <item>Cola</item>
-        <item>Tonic Water</item>
-        <item>Cranberry Juice</item>
-        <item>Orange Juice</item>
-        <item>Sour Mix</item>
+        <item><b>Cola</b></item>
+        <item><b>Tonic Water</b></item>
+        <item><b>Cranberry Juice</b></item>
+        <item><b>Orange Juice</b></item>
+        <item><b>Sour Mix</b></item>
     </string-array>
     <string-array name="Garnishes">
         <item>None</item>
@@ -65,4 +64,29 @@
         <item>Lime</item>
         <item>Cherry</item>
     </string-array>
+
+<!--Vodka Drinks-->
+    <string name="screwdriver"><b>Screwdriver</b></string>
+    <string name="capeCod"><b>Cape Cod</b></string>
+    <string name="vodkaTonic">Vodka Tonic</string>
+    <string name="vodkaCollins">Vodka Collins</string>
+<!--Tequila Drinks-->
+    <string name="sunrise"><b>Tequila Sunrise</b></string>
+    <string name="margarita"><b>Margarita</b></string>
+    <string name="tequilaBatanga">Tequila Batanga</string>
+    <string name="tequilaTonic">Tequila and Tonic</string>
+    <string name="cranberryMargarita">Cranberry Margarita</string>
+<!--Rum Drinks-->
+    <string name="rumAndCoke"><b>Rum and Coke</b></string>
+    <string name="rumSour">Rum Sour</string>
+    <string name="rumSunset">Rum Sunset</string>
+    <string name="cranberryZombie">Cranberry Zombie</string>
+<!--Gin Drinks-->
+    <string name="ginTonic">Gin and Tonic</string>
+    <string name="cranberryGin">Cranberry Gin</string>
+    <string name="orangeBlossom">Orange Blossom</string>
+    <string name="ginSour">Gin Sour</string>
+<!--Placeholders-->
+    <string name="createDrink">Create your Drink</string>
+    <string name="drinkHere"><b>See your drink here</b></string>
 </resources>

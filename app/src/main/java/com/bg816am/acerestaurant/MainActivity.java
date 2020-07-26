@@ -13,15 +13,16 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.Calendar;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    //Create the home screen buttons to go to individual apps
-    Button goToReservation;
-    Button goToDrink;
+    //Create the home screen buttons to go to individual apps and link to XML
+    Button goToReservation =findViewById(R.id.resButton);
+    Button goToDrink = findViewById(R.id.drinkButton);
 
 
 
@@ -31,11 +32,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        // link buttons to IDs in XML
-        goToReservation =findViewById(R.id.resButton);
-        goToDrink = findViewById(R.id.drinkButton);
 
 
         // click to go the Reservation screen
