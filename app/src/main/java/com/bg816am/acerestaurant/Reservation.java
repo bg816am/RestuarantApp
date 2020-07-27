@@ -5,7 +5,6 @@ import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.icu.util.Calendar;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -13,9 +12,6 @@ import android.app.DatePickerDialog;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
-
-import java.sql.Time;
-import java.time.Clock;
 
 public class Reservation extends MainActivity {
 
@@ -111,6 +107,8 @@ public class Reservation extends MainActivity {
                     }
                 });
                 alert.show(); //show alert
+   //TODO: Collect phone number and requests field from user
+   //TODO: Correct time to show AM/PM
 
             }
         });

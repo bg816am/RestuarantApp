@@ -6,7 +6,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 public class DrinkMixer extends MainActivity implements AdapterView.OnItemSelectedListener {
@@ -31,8 +30,6 @@ public class DrinkMixer extends MainActivity implements AdapterView.OnItemSelect
         //I opted to not use the garnishes option at this time in the app, due to unexpected complexity with getting the liquors and mixers to work correctly. Will add in once
         //I am able to use the other spinners correctly
         //Spinner garnishArray = findViewById(R.id.garnishSpinner);
-
-
 
         makeDrink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +93,7 @@ public class DrinkMixer extends MainActivity implements AdapterView.OnItemSelect
                 mMixerSelect.setAdapter(mixerAdapter);
                 mMixerSelect.setOnItemSelectedListener(DrinkMixer.this);
 
-
+//TODO: Add an option for when a wrong combination is selected, customer will be prompted to try again.
 
             }
         });

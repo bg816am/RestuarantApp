@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:alpha=".80"
-    android:background="@drawable/woodbackgrd"
+    android:background="@drawable/backgrounddrink"
     tools:context=".MainActivity">
-
+<!--Button for reservation screen-->
     <Button
         android:id="@+id/resButton"
         style="@style/Widget.AppCompat.Button.Colored"
@@ -21,7 +21,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/drinkButton" />
-
+<!--Button for drink mixer-->
     <Button
         android:id="@+id/drinkButton"
         style="@style/Widget.AppCompat.Button.Colored"
@@ -37,13 +37,13 @@
 
     <TextView
         android:id="@+id/textView"
-        android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/titleView"
         android:textAlignment="center"
         android:textColor="@color/primaryText"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
