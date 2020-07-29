@@ -10,16 +10,30 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.app.DatePickerDialog;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 public class Reservation extends MainActivity {
 
-
     private TextView mDisplayDate;
-    private DatePickerDialog.OnDateSetListener mOnDateSetListener;
-
     private TextView mDisplayTime;
+
+
+    private Spinner mGuests;
+
+    private String mName;
+    private String mEmail;
+    private String mPhone;
+    private String mSpecialRequests;
+
+    private EditText mSpecialRequestsBox;
+    private EditText mNameBox;
+    private EditText mPhoneBox;
+    private EditText mEmailBox;
+
+    private DatePickerDialog.OnDateSetListener mOnDateSetListener;
     private TimePickerDialog.OnTimeSetListener mOnTimeSetListener;
 
 
@@ -89,24 +103,40 @@ public class Reservation extends MainActivity {
             @Override
             public void onClick(View view) {
                 //Pulls what was typed in name/email
-               EditText nameBox = findViewById(R.id.nameBox);
-               String name = nameBox.getText().toString();
+               mNameBox = findViewById(R.id.nameBox);
+               mName = mNameBox.getText().toString();
+
+               mEmailBox = findViewById(R.id.emailBox);
+               mEmail = mEmailBox.getText().toString();
+
+               mPhoneBox = findViewById(R.id.phoneBox);
+               mPhone = mPhoneBox.getText().toString();
+
+               mSpecialRequestsBox = findViewById(R.id.specialRequests);
+               mSpecialRequests = mSpecialRequestsBox.getText().toString();
+
+
                TextView timePicker = findViewById(R.id.visitTime);
                String time = timePicker.getText().toString();
                TextView datePicker = findViewById(R.id.dateSelect);
                String date = datePicker.getText().toString();
-               //Sets up an alert pop up confirming reservation
-               AlertDialog.Builder alert = new AlertDialog.Builder(Reservation.this);
-                alert.setTitle("Thank you " + name + "!");
-                alert.setCancelable(false);
-                alert.setMessage("See you on "+ date + " at "+ time + ".");
-                alert.setPositiveButton("Main Menu", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        finish();
-                    }
-                });
-                alert.show(); //show alert
+               if ((mName.equals("")) || (mPhone.equals("")) || (mEmail.equals(""))) {
+                   Toast toast = Toast.makeText(Reservation.this, "Please complete all fields", Toast.LENGTH_SHORT);
+                   toast.show();
+                } else {
+                   //Sets up an alert pop up confirming reservation
+                   AlertDialog.Builder alert = new AlertDialog.Builder(Reservation.this);
+                   alert.setTitle("Thank you " + mName + "!");
+                   alert.setCancelable(false);
+                   alert.setMessage("See you on " + date + " at " + time + ".");
+                   alert.setPositiveButton("Main Menu", new DialogInterface.OnClickListener() {
+                       @Override
+                       public void onClick(DialogInterface dialogInterface, int i) {
+                           finish();
+                       }
+                   });
+                   alert.show(); //show alert
+               }
    //TODO: Collect phone number and requests field from user
    //TODO: Correct time to show AM/PM
 
