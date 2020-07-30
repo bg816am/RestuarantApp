@@ -89,15 +89,19 @@ public class Reservation extends MainActivity {
         mOnTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker timePicker, int hour, int min) {
-
+                String amPm;
                 if(hour > 12) {
                     hour = hour - 12;
-                }
+                    amPm = " PM";
+                } else
+                    amPm = " AM";
 
-                String time = (hour + ":" + min);
+                String time = (hour + ":" + min + amPm);
                 mDisplayTime.setText(time);
             }
         };
+
+
         //On button press, confirming the reservation
         confirmReservation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,7 +124,7 @@ public class Reservation extends MainActivity {
                String time = timePicker.getText().toString();
                TextView datePicker = findViewById(R.id.dateSelect);
                String date = datePicker.getText().toString();
-               if ((mName.equals("")) || (mPhone.equals("")) || (mEmail.equals(""))) {
+               if (!(isNameValid(mName)) || !(isPhoneValid(mPhone)) || !(isEmailValid(mEmail))) {
                    Toast toast = Toast.makeText(Reservation.this, "Please complete all fields", Toast.LENGTH_SHORT);
                    toast.show();
                 } else {
@@ -137,13 +141,28 @@ public class Reservation extends MainActivity {
                    });
                    alert.show(); //show alert
                }
-   //TODO: Collect phone number and requests field from user
-   //TODO: Correct time to show AM/PM
+   //TODO: Collect phone number and requests field from user = DONE
+   //TODO: Correct time to show AM/PM = DONE
 
             }
         });
 
+
             }
+    private boolean isEmailValid(String mEmail) {
+        // You can add more checking logic here.
+        return mEmail.contains("@") && (mEmail.length() > 1);
+    }
+
+    private boolean isPhoneValid(String mPhone){
+
+        return mPhone.length() == 10;
+    }
+
+    private boolean isNameValid(String mName){
+
+        return mName.equals("");
+    }
 
     }
 
