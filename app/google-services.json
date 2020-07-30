@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "597965273648",
+    "firebase_url": "https://ace-restaurant-f2491.firebaseio.com",
+    "project_id": "ace-restaurant-f2491",
+    "storage_bucket": "ace-restaurant-f2491.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597965273648:android:23edc28f7549949c4e0bf5",
+        "android_client_info": {
+          "package_name": "com.bg816am.acerestaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597965273648-d54389k7ij98pr2sqa6dncnk49sh7a1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC17Tyo9MxMzyn2zMdhwDp0tz-37BCjSI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597965273648-d54389k7ij98pr2sqa6dncnk49sh7a1r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
