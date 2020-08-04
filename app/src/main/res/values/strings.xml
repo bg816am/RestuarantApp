@@ -14,6 +14,10 @@
     <string name="timeSpinner">Time</string>
     <string name="resButton">Date of Visit</string>
     <string name="timeButton">Time of Visit</string>
+    <string name="requestsText">Enter any special requests here</string>
+    <string name="visitTime">Time of Visit</string>
+    <string name="visitDate">Date of Visit</string>
+    <string name="dateSelect">Select Date</string>
 
    <!-- Reservation Guest Array -->
     <string-array name="numberOfGuests">
@@ -33,15 +37,11 @@
     <string name="liquorChoice">Choose a Liquor</string>
     <string name="garnishChoice">Would you like to  add a garnish?</string>
     <string name="drinkName"> Your Drink</string>
-    <string name="yourDrink"> You have made a</string>
     <string name="goToReservation">Go to reservation layout</string>
     <string name="titleView">Welcome to Ace Restaurant</string>
-    <string name="requestsText">Enter any special requests here</string>
     <string name="confirmButton">Confirm</string>
     <string name="yourDrinkTitleView">Your Drink</string>
-    <string name="visitTime">Time of Visit</string>
-    <string name="visitDate">Date of Visit</string>
-    <string name="dateSelect">Select Date</string>
+
 
     <string-array name="Liquors">
         <item><b>Vodka</b></item>
@@ -89,4 +89,5 @@
 <!--Placeholders-->
     <string name="createDrink">Create your Drink</string>
     <string name="drinkHere"><b>See your drink here</b></string>
+    <string name="yourDrink"> This is not a combination we recommend</string>
 </resources>

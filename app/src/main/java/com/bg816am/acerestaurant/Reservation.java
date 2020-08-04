@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.app.DatePickerDialog;
@@ -21,7 +22,8 @@ public class Reservation extends MainActivity {
     private TextView mDisplayTime;
 
 
-    private Spinner mGuests;
+    private Spinner mSelectGuests;
+    //private int mNumberOfGuests;
 
     private String mName;
     private String mEmail;
@@ -46,6 +48,7 @@ public class Reservation extends MainActivity {
         mDisplayDate = findViewById(R.id.dateSelect);
         mDisplayTime = findViewById(R.id.visitTime);
         Button confirmReservation = findViewById(R.id.confirmButton);
+
 
         //bring up a clock widget allowing to select a time
         mDisplayTime.setOnClickListener(new View.OnClickListener() {
@@ -102,11 +105,15 @@ public class Reservation extends MainActivity {
         };
 
 
+
         //On button press, confirming the reservation
         confirmReservation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Pulls what was typed in name/email
+                //int mNumberOfGuests = mSelectGuests.getSelectedItemPosition();
+
+
                mNameBox = findViewById(R.id.nameBox);
                mName = mNameBox.getText().toString();
 
@@ -119,12 +126,16 @@ public class Reservation extends MainActivity {
                mSpecialRequestsBox = findViewById(R.id.specialRequests);
                mSpecialRequests = mSpecialRequestsBox.getText().toString();
 
+               //int numberOfGuests = mGuests.getSelectedItemPosition();
 
                TextView timePicker = findViewById(R.id.visitTime);
                String time = timePicker.getText().toString();
                TextView datePicker = findViewById(R.id.dateSelect);
                String date = datePicker.getText().toString();
-               if (!(isNameValid(mName)) || !(isPhoneValid(mPhone)) || !(isEmailValid(mEmail))) {
+
+               //logic for making sure user enters in information correctly
+               if ( !isNameValid(mName) || !isPhoneValid(mPhone) || !isEmailValid(mEmail)
+                       || time.length() < 4 || date.length() < 2   ) {
                    Toast toast = Toast.makeText(Reservation.this, "Please complete all fields", Toast.LENGTH_SHORT);
                    toast.show();
                 } else {
@@ -161,7 +172,7 @@ public class Reservation extends MainActivity {
 
     private boolean isNameValid(String mName){
 
-        return mName.equals("");
+        return !mName.equals("");
     }
 
     }
