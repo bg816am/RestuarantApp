@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DrinkMixer extends MainActivity implements AdapterView.OnItemSelectedListener {
 
@@ -39,10 +40,11 @@ public class DrinkMixer extends MainActivity implements AdapterView.OnItemSelect
                 int liquorChoice = mLiquorSelect.getSelectedItemPosition();
                 int mixerChoice = mMixerSelect.getSelectedItemPosition();
 
+                //TODO: Set so item selected stays after hitting 'Make Drink'
 
-                //TODO: Clean up this code and/or use an alternate solution to display text on selected drink. This is long and prone to errors and
-                //TODO: not easy to update. Will clean for final submission.
-                //TODO: Currently on submit the text boxes go back to original(default) values. Update to a cleaner look.
+
+
+               //This if else series takes the position (int) for each selection and associates with a drink.
                 if (liquorChoice == 0 && mixerChoice == 1) {
                     mDisplayDrink.setText(R.string.vodkaTonic);
                 } else if (liquorChoice == 0 && mixerChoice == 2) {
@@ -81,6 +83,8 @@ public class DrinkMixer extends MainActivity implements AdapterView.OnItemSelect
                     mDisplayDrink.setText(R.string.yourDrink);
                 }
 
+                Toast.makeText(DrinkMixer.this, "Making your drink", Toast.LENGTH_SHORT).show();
+
                 // Create liquor adapter
                 ArrayAdapter<CharSequence> liquorAdapter = ArrayAdapter.createFromResource(DrinkMixer.this, R.array.Liquors, android.R.layout.simple_spinner_item);
                 liquorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -93,7 +97,7 @@ public class DrinkMixer extends MainActivity implements AdapterView.OnItemSelect
                 mMixerSelect.setAdapter(mixerAdapter);
                 mMixerSelect.setOnItemSelectedListener(DrinkMixer.this);
 
-//TODO: Add an option for when a wrong combination is selected, customer will be prompted to try again.
+
 
             }
         });

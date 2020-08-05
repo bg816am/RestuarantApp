@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         //Create the home screen buttons to go to individual apps and link to XML
         Button goToReservation =findViewById(R.id.resButton);
         Button goToDrink = findViewById(R.id.drinkButton);

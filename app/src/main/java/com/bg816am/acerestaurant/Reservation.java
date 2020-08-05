@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class Reservation extends MainActivity {
 
     private TextView mDisplayDate;
@@ -23,7 +25,7 @@ public class Reservation extends MainActivity {
 
 
     private Spinner mSelectGuests;
-    //private int mNumberOfGuests;
+    private int mNumberOfGuests;
 
     private String mName;
     private String mEmail;
@@ -57,13 +59,14 @@ public class Reservation extends MainActivity {
                 Calendar time = Calendar.getInstance();
                 int hour = time.get(Calendar.HOUR);
                 int min = time.get(Calendar.MINUTE);
-            TimePickerDialog timeDiag = new TimePickerDialog(Reservation.this, R.style.ThemeOverlay_AppCompat_Dialog,mOnTimeSetListener,
-                    hour, min, false);
-            timeDiag.show();
+
+                TimePickerDialog timeDiag = new TimePickerDialog(Reservation.this, R.style.ThemeOverlay_AppCompat_Dialog, mOnTimeSetListener,
+                        hour, min, false);
+                timeDiag.show();
             }
         });
 
-        //bing up a calendar widget allowing for a date to be selected.
+        //bring up a calendar widget allowing for a date to be selected.
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,10 +85,10 @@ public class Reservation extends MainActivity {
         mOnDateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-            month = month +1;
+                month = month + 1;
 
-            String date = month + "/" + day;
-            mDisplayDate.setText(date);
+                String date = month + "/" + day;
+                mDisplayDate.setText(date);
             }
         };
         // Replaces the time on the textview after selecting a the time
@@ -93,7 +96,7 @@ public class Reservation extends MainActivity {
             @Override
             public void onTimeSet(TimePicker timePicker, int hour, int min) {
                 String amPm;
-                if(hour > 12) {
+                if (hour > 12) {
                     hour = hour - 12;
                     amPm = " PM";
                 } else
@@ -105,7 +108,6 @@ public class Reservation extends MainActivity {
         };
 
 
-
         //On button press, confirming the reservation
         confirmReservation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,69 +115,91 @@ public class Reservation extends MainActivity {
                 //Pulls what was typed in name/email
                 //int mNumberOfGuests = mSelectGuests.getSelectedItemPosition();
 
+                mSelectGuests = findViewById(R.id.guestNumber);
+                mNumberOfGuests = mSelectGuests.getSelectedItemPosition();
 
-               mNameBox = findViewById(R.id.nameBox);
-               mName = mNameBox.getText().toString();
+                mNameBox = findViewById(R.id.nameBox);
+                mName = mNameBox.getText().toString();
 
-               mEmailBox = findViewById(R.id.emailBox);
-               mEmail = mEmailBox.getText().toString();
+                mEmailBox = findViewById(R.id.emailBox);
+                mEmail = mEmailBox.getText().toString();
 
-               mPhoneBox = findViewById(R.id.phoneBox);
-               mPhone = mPhoneBox.getText().toString();
+                mPhoneBox = findViewById(R.id.phoneBox);
+                mPhone = mPhoneBox.getText().toString();
 
-               mSpecialRequestsBox = findViewById(R.id.specialRequests);
-               mSpecialRequests = mSpecialRequestsBox.getText().toString();
+                mSpecialRequestsBox = findViewById(R.id.specialRequests);
+                mSpecialRequests = mSpecialRequestsBox.getText().toString();
 
-               //int numberOfGuests = mGuests.getSelectedItemPosition();
 
-               TextView timePicker = findViewById(R.id.visitTime);
-               String time = timePicker.getText().toString();
-               TextView datePicker = findViewById(R.id.dateSelect);
-               String date = datePicker.getText().toString();
+                TextView timePicker = findViewById(R.id.visitTime);
+                String time = timePicker.getText().toString();
+                TextView datePicker = findViewById(R.id.dateSelect);
+                String date = datePicker.getText().toString();
 
-               //logic for making sure user enters in information correctly
-               if ( !isNameValid(mName) || !isPhoneValid(mPhone) || !isEmailValid(mEmail)
-                       || time.length() < 4 || date.length() < 2   ) {
-                   Toast toast = Toast.makeText(Reservation.this, "Please complete all fields", Toast.LENGTH_SHORT);
-                   toast.show();
+                mDisplayDate.setText(date);
+                mDisplayTime.setText(time);
+
+                //using a random number generator to simulate a confirmation number
+                double random = Math.random();
+                int confirmNumber = (int) (random * 100);
+
+                // To use proper grammar depending on number of people going to restuarant
+                String peoplePlural;
+
+                if (mNumberOfGuests == 1) {
+                    peoplePlural = "person";
+                } else
+                    peoplePlural = "people";
+
+                //logic for making sure user enters in information correctly
+                if (!isNameValid(mName) || !isPhoneValid(mPhone) || !isEmailValid(mEmail)
+                        || time.length() < 4 || date.length() < 2 || mNumberOfGuests < 1) {
+                    Toast toast = Toast.makeText(Reservation.this, "Please complete all fields", Toast.LENGTH_SHORT);
+                    toast.show();
                 } else {
-                   //Sets up an alert pop up confirming reservation
-                   AlertDialog.Builder alert = new AlertDialog.Builder(Reservation.this);
-                   alert.setTitle("Thank you " + mName + "!");
-                   alert.setCancelable(false);
-                   alert.setMessage("See you on " + date + " at " + time + ".");
-                   alert.setPositiveButton("Main Menu", new DialogInterface.OnClickListener() {
-                       @Override
-                       public void onClick(DialogInterface dialogInterface, int i) {
-                           finish();
-                       }
-                   });
-                   alert.show(); //show alert
-               }
-   //TODO: Collect phone number and requests field from user = DONE
-   //TODO: Correct time to show AM/PM = DONE
+                    //Sets up an alert pop up confirming reservation with a confirm number.
+                    Toast.makeText(Reservation.this, "Confirming with restaurant", Toast.LENGTH_SHORT).show();
+                    AlertDialog.Builder alert = new AlertDialog.Builder(Reservation.this);
+                    alert.setTitle("Thank you " + mName + "!");
+                    alert.setCancelable(false);
+                    alert.setMessage("See you on " + date + " at " + time + ". Your reservation number is "
+                            + confirmNumber + " for " + mNumberOfGuests + " " + peoplePlural + ".");
+                    alert.setPositiveButton("Main Menu", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    });
+                    alert.show(); //show alert
+                }
+                //TODO: When an hour is selected, it only shows one 0. Need to make it show 00.
 
             }
         });
 
 
-            }
+    }
+
+    //Logic for checking if the user enters in valid input into the reservation screen
+    //Checks for email to have a@ and longer than one character
     private boolean isEmailValid(String mEmail) {
-        // You can add more checking logic here.
+
         return mEmail.contains("@") && (mEmail.length() > 1);
     }
 
-    private boolean isPhoneValid(String mPhone){
+    //makes sure the phone number is correct length
+    private boolean isPhoneValid(String mPhone) {
 
         return mPhone.length() == 10;
     }
 
-    private boolean isNameValid(String mName){
+    //makes sure the user enters something into the name field
+    private boolean isNameValid(String mName) {
 
         return !mName.equals("");
     }
 
-    }
+}
 
 
 
