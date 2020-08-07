@@ -83,7 +83,7 @@ public class DrinkMixer extends MainActivity implements AdapterView.OnItemSelect
                     mDisplayDrink.setText(R.string.yourDrink);
                 }
 
-                Toast.makeText(DrinkMixer.this, "Making your drink", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DrinkMixer.this, "Shaking your ingredients", Toast.LENGTH_SHORT).show();
 
                 // Create liquor adapter
                 ArrayAdapter<CharSequence> liquorAdapter = ArrayAdapter.createFromResource(DrinkMixer.this, R.array.Liquors, android.R.layout.simple_spinner_item);

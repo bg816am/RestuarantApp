@@ -9,156 +9,160 @@
 
     <TextView
         android:id="@+id/reservations"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/goReservation"
         android:textAlignment="center"
         android:textColor="@color/justBlack"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/welcomeText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/resTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/resTitle" />
 
     <TextView
         android:id="@+id/resTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:text="@string/title"
         android:textAlignment="center"
         android:textColor="@color/justBlack"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/reservations"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--Choose number of guests-->
+
     <TextView
         android:id="@+id/welcomeText"
-        android:layout_width="387dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/thankYou"
         android:textAlignment="center"
         android:textColor="@color/justBlack"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/specialRequests"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reservations" />
-<!--Choose number of guests-->
+
+    <!--Enter phone number-->
+
     <Spinner
         android:id="@+id/guestNumber"
-        android:layout_width="208dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="232dp"
+        android:layout_width="211dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:entries="@array/numberOfGuests"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/phoneBox"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/phoneBox" />
-<!--Enter phone number-->
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneBox" />
+
     <EditText
         android:id="@+id/phoneBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="31dp"
+        android:layout_marginTop="16dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/phoneBox"
         android:inputType="phone"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guestNumber"
-        app:layout_constraintStart_toStartOf="parent" />
-<!--Enter email address-->
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailBox" />
+    <!--Enter email address-->
+    <!--Name of user-->
+    <!--Confirm reservation-->
     <EditText
         android:id="@+id/emailBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="16dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/emailBox"
         android:inputType="textEmailAddress"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/phoneBox"
-        app:layout_constraintStart_toStartOf="parent" />
-<!--Name of user-->
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameBox" />
+
     <EditText
         android:id="@+id/nameBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="228dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/nameBox"
         android:inputType="textPersonName"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/emailBox"
-        app:layout_constraintStart_toStartOf="parent" />
-<!--Confirm reservation-->
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/confirmButton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/confirmButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/specialRequests"
-        app:layout_constraintVertical_bias="0.962" />
-<!--Text box for any other information-->
+        app:layout_constraintTop_toBottomOf="@+id/specialRequests" />
+    <!--Text box for any other information-->
+    <!--Tap screen to select date of visit-->
+    <!--Tap screen to select time of visit.-->
+
     <EditText
         android:id="@+id/specialRequests"
-        android:layout_width="278dp"
+        android:layout_width="0dp"
         android:layout_height="127dp"
+        android:layout_marginTop="492dp"
         android:autofillHints=""
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/requestsText"
         android:inputType="textMultiLine"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
-<!--Tap screen to select date of visit-->
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/dateSelect"
-        android:layout_width="91dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="24dp"
         android:hint="@string/visitDate"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/welcomeText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/nameBox"
-        app:layout_constraintTop_toTopOf="@+id/welcomeText" />
-<!--Tap screen to select time of visit.-->
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/visitTime"
-        android:layout_width="109dp"
-        android:layout_height="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
         android:hint="@string/visitTime"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/welcomeText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.613"
-        app:layout_constraintStart_toEndOf="@+id/emailBox"
-        app:layout_constraintTop_toBottomOf="@+id/dateSelect"
-        app:layout_constraintVertical_bias="0.503" />
+        app:layout_constraintTop_toBottomOf="@+id/dateSelect" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
