@@ -28,9 +28,6 @@ public class DrinkMixer extends MainActivity implements AdapterView.OnItemSelect
         mMixerSelect = findViewById(R.id.mixerSpinner);
         Button makeDrink = findViewById(R.id.createDrink);
 
-        //I opted to not use the garnishes option at this time in the app, due to unexpected complexity with getting the liquors and mixers to work correctly. Will add in once
-        //I am able to use the other spinners correctly
-        //Spinner garnishArray = findViewById(R.id.garnishSpinner);
 
         makeDrink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +37,7 @@ public class DrinkMixer extends MainActivity implements AdapterView.OnItemSelect
                 int liquorChoice = mLiquorSelect.getSelectedItemPosition();
                 int mixerChoice = mMixerSelect.getSelectedItemPosition();
 
-                //TODO: Set so item selected stays after hitting 'Make Drink'
+
 
 
 

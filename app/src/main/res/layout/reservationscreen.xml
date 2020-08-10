@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:alpha=".80"
@@ -35,10 +34,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--Choose number of guests-->
 
     <TextView
-        android:id="@+id/welcomeText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -53,8 +50,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reservations" />
 
-    <!--Enter phone number-->
-
+<!--Spinner for selecting number of guests-->
     <Spinner
         android:id="@+id/guestNumber"
         android:layout_width="211dp"
@@ -65,6 +61,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phoneBox" />
 
+<!--Prompt for phone number-->
     <EditText
         android:id="@+id/phoneBox"
         android:layout_width="wrap_content"
@@ -78,9 +75,8 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailBox" />
+
     <!--Enter email address-->
-    <!--Name of user-->
-    <!--Confirm reservation-->
     <EditText
         android:id="@+id/emailBox"
         android:layout_width="wrap_content"
@@ -95,6 +91,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameBox" />
 
+<!--    Prompt for customer name-->
     <EditText
         android:id="@+id/nameBox"
         android:layout_width="wrap_content"
@@ -111,6 +108,7 @@
 
     <Button
         android:id="@+id/confirmButton"
+        android:background="@color/buttonColor"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -122,10 +120,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/specialRequests" />
-    <!--Text box for any other information-->
-    <!--Tap screen to select date of visit-->
-    <!--Tap screen to select time of visit.-->
 
+<!--Text box for any other information-->
     <EditText
         android:id="@+id/specialRequests"
         android:layout_width="0dp"
@@ -142,6 +138,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<!--    Select date spinner-->
     <TextView
         android:id="@+id/dateSelect"
         android:layout_width="wrap_content"
@@ -153,6 +150,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<!--Select time of visit-->
     <TextView
         android:id="@+id/visitTime"
         android:layout_width="wrap_content"

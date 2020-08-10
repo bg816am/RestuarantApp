@@ -172,7 +172,6 @@ public class Reservation extends MainActivity {
                     });
                     alert.show(); //show alert
                 }
-                //TODO: When an hour is selected, it only shows one 0. Need to make it show 00.
 
             }
         });

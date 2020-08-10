@@ -4,9 +4,6 @@
     <color name="colorPrimaryDark">#388E3C</color>
     <color name="colorAccent">#03A9F4</color>
     <color name="primaryText">#212121</color>
-    <color name="secondaryText">#757575</color>
-    <color name="icons">#FFFFFF</color>
-    <color name="divider">#BDBDBD</color>
-    <color name="primaryLight">#C8E6C9</color>
     <color name="justBlack">#000000</color>
+    <color name="buttonColor">#eebb4d</color>
 </resources>

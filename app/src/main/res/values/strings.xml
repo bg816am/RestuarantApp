@@ -11,15 +11,11 @@
     <string name="nameBox">Name</string>
     <string name="emailBox">Email</string>
     <string name="phoneBox">Phone</string>
-    <string name="timeSpinner">Time</string>
-    <string name="resButton">Date of Visit</string>
-    <string name="timeButton">Time of Visit</string>
     <string name="requestsText">Enter any special requests here</string>
     <string name="visitTime">Time of Visit</string>
     <string name="visitDate">Date of Visit</string>
-    <string name="dateSelect">Select Date</string>
 
-   <!-- Reservation Guest Array -->
+    <!-- Reservation Guest Array -->
     <string-array name="numberOfGuests">
         <item>How many guests?</item>
         <item>1</item>
@@ -35,8 +31,6 @@
     <!-- Drink Mixer Screen Items  -->
     <string name="mixerChoice">Select a Mixer</string>
     <string name="liquorChoice">Choose a Liquor</string>
-    <string name="garnishChoice">Would you like to  add a garnish?</string>
-    <string name="drinkName"> Your Drink</string>
     <string name="goToReservation">Go to reservation layout</string>
     <string name="titleView">Welcome to Ace Restaurant</string>
     <string name="confirmButton">Confirm</string>
@@ -56,16 +50,8 @@
         <item><b>Orange Juice</b></item>
         <item><b>Sour Mix</b></item>
     </string-array>
-    <string-array name="Garnishes">
-        <item>None</item>
-        <item>Salt Rim</item>
-        <item>Sugar Rim</item>
-        <item>Lemon</item>
-        <item>Lime</item>
-        <item>Cherry</item>
-    </string-array>
 
-<!--Vodka Drinks-->
+    <!--Vodka Drinks-->
     <string name="screwdriver"><b>Screwdriver</b></string>
     <string name="capeCod"><b>Cape Cod</b></string>
     <string name="vodkaTonic">Vodka Tonic</string>
